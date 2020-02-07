@@ -1,2 +1,2 @@
 # Data-Structures-JS
-A practice of data structures in Javascript like Linked Lists, Trees, Hash Maps, etc...
+A Practice of JavaScript Fundamentals, Data Structures, and Algorithms
