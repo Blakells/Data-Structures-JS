@@ -1,0 +1,40 @@
+body, html{
+  height:95%;
+}
+body{
+  margin: 0px;
+  background-color:#444;
+  font-size: 35px;
+  background-image: url("images/spaces.jpg");
+  background-repeat: round;
+}
+body, a:link, a:visited, a:active{
+  color: black;
+}
+
+.title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.bg-custom{
+  height:30px;
+  background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+}
+.custom-btn {
+  background: linear-gradient(to left, orange , yellow, green, cyan, blue, violet);
+}
+.title{
+  background-color: silver;
+}
+.dancer{
+  border-radius:10px;
+  position:absolute;
+}
+
+.team {
+  max-height: 100px;
+}
+
+.breaker {
+  max-height: 100px !important;
+}
