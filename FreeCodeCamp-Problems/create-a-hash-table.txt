@@ -1,0 +1,39 @@
+var called = 0;
+var hash = string => {
+  called++;
+  var hashed = 0;
+  for (var i = 0; i < string.length; i++) {
+    hashed += string.charCodeAt(i);
+  }
+  return hashed;
+};
+var HashTable = function() {
+  this.collection = {};
+  // change code below this line
+  this.add = function(k,v) {
+    var index = hash(k);
+    
+    if (!this.collection.hasOwnProperty(index)) {
+      this.collection[index] = {};
+    }
+    this.collection[index][k] = v;
+  };
+  this.remove = function(k) {
+    var index = hash(k);
+    var obj = this.collection[hash(k)];
+    if (obj.hasOwnProperty(k)) {
+      delete obj[k];
+    }
+    if (!Object.keys(obj).length) {
+      delete this.collection[hash(k)];
+    }
+  };
+  this.lookup = function (k) {
+    var index = hash(k);
+    if (this.collection.hasOwnProperty(index)) {
+      return this.collection[index][k];
+    }
+    return null;
+  };
+  // change code above this line
+};

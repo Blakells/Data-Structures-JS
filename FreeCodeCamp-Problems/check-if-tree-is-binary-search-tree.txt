@@ -1,0 +1,38 @@
+var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+function Node(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
+function BinarySearchTree() {
+  this.root = null;
+}
+function isBinarySearchTree(tree) {
+  // change code below this line
+  if (!tree.root) {
+    return false;
+  } else {
+    var isBST = true;
+    function check(node) {
+      if (node.left) {
+        var left = node.left;
+        if (left.value > node.value) {
+          isBST = false;
+        } else {
+          check(left);
+        }
+      }
+      if (node.right) {
+        var right = node.right;
+        if (right.value < node.value) {
+          isBST = false;
+        } else {
+          check(right);
+        }
+      }
+    }
+    check(tree.root);
+    return isBST;
+  }
+  // change code above this line
+}
